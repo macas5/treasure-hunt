@@ -35,10 +35,10 @@ function getDistance(clickEvent, target) {
 function getProgressHints(distance) { 
     if (distance<12) { return "Boiling hot!"}
     else if(distance < 20) {return "Really hot!"}
-    else if(distance <40) {return "Hot!"}
-    else if(distance <80) {return "Warm"}
-    else if(distance <160) {return "Cold"}
-    else if(distance <320) {return "Really cold"}
+    else if(distance < 40) {return "Hot!"}
+    else if(distance < 80) {return "Warm"}
+    else if(distance < 160) {return "Cold"}
+    else if(distance < 320) {return "Really cold"}
     else {return "Freezing!"}
 };
 
@@ -53,4 +53,36 @@ $("#map").click(function(event){clicks++;
 
 function pageReload() {
     window.location.reload()
+}
+document.querySelector('#easy').onclick = function(){pageReload()}
+
+document.querySelector('#hard').onclick = function(){
+    
+    document.getElementById("game-rules").innerHTML = "get ready!!!"
+    const darkBGr = document.getElementById("background")
+    darkBGr.setAttribute("src", "https://wallpaperaccess.com/full/3591276.jpg")
+    darkBGr.style.opacity = "0.9"
+    let darkmode = document.getElementsByClassName("darkmode")
+    for (let i=0; i<darkmode.length; i++){
+        darkmode[i].style.color = "black";
+        function getProgressHints(distance) { 
+            if (distance < 8) { return "Boiling hot!"}
+            else if(distance < 10) {return "Really hot!"}
+            else if(distance < 20) {return "Hot!"}
+            else if(distance < 50) {return "Warm"}
+            else if(distance < 100) {return "Cold"}
+            else if(distance < 200) {return "Really cold"}
+            else {return "Freezing!"}
+        };
+        let clicks2=0;
+        
+        $("#map").click(function(event){clicks2++;
+            let distance=getDistance(event, target);
+            let distanceHint=getProgressHints(distance);
+            $("#distance").text(distanceHint);
+            if (distance < 5) { alert("Congratulations! You found the treasure in " + clicks2 + " clicks!")}
+         });
+     
+    };
+
 }
