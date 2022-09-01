@@ -1,0 +1,192 @@
+body {
+    background: url(https://r4.wallpaperflare.com/wallpaper/30/586/460/artwork-fantasy-art-digital-art-forest-wallpaper-3cdadbae5dd4b0ca4dd008fd72d13bf3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: lighten;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 7vh;
+    font-family: 'Roboto Slab', serif;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 7vh;
+}
+
+.gridItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+#imgWrapper {
+    max-width: 100%;
+    border: solid 1px azure;
+    border-radius: 20%;
+    overflow: hidden;
+}
+
+#treasureMap {
+    width: 100%;
+    height: 100%;
+}
+
+#difficultyLevels {
+    max-width: fit-content;
+    min-width: 50%;
+}
+
+#clueContainer {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    flex-direction: column;
+}
+
+h1 {
+    color: azure;
+    font-size: 2vw;
+}
+
+#difficultyLevels h1 {
+    margin: 30px;
+}
+
+#instruction {
+    padding: 10px;
+    font-size: 3vw;
+}
+
+#clickScore {
+    padding: 25px;
+    border: solid 1px azure;
+    border-radius: 30%;
+    color: azure;
+    display: none;
+}
+
+#foundTarget {
+    height: 40%;
+    width: 40%;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: rgba(5, 42, 3, 0.7);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding: 5%;
+}
+
+#popUpImg {
+    width: 30%;
+    position: relative;
+}
+
+button {
+    height: 50px;
+    min-width: 50%;
+    margin: 7px;
+    border: 2px solid azure;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(5, 42, 3, 0.879);
+    background-color: rgba(240, 255, 255, 0.324);
+    transition: transform .2s;
+}
+
+button:hover {
+    transform: scale(1.15);
+}
+
+button:disabled {
+    color: rgba(5, 42, 3, 0.323);
+}
+
+#btnAgain {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 567px) {
+    #clueContainer {
+
+        padding-top: 0;
+    }
+
+    #clickScore {
+        padding: 0;
+        border-radius: 40%;
+    }
+
+    #difficultyLevels h1 {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .gridContainer {
+        display: block;
+        padding: 0;
+    }
+
+    #gameContainer {
+        max-width: 80%;
+        padding-top: 10%;
+    }
+
+    #difficultyLevels {
+        max-height: 70px;
+        max-width: 50%;
+        padding-left: 25%;
+    }
+
+    #clueContainer {
+        max-height: 70px;
+        max-width: 50%;
+        padding-left: 25%;
+    }
+
+    h1 {
+        font-size: larger;
+    }
+
+    button {
+        font-size: medium;
+    }
+
+    #btnAgain,
+    #btnReturn {
+        height: fit-content;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #gameContainer {
+        max-width: 90%;
+        min-width: 90%;
+    }
+
+    #foundTarget {
+        height: 30%;
+        width: 30%;
+        top: 60%;
+    }
+}
