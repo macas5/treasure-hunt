@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the buried treasure</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="map1_styles.css">
+</head>
+<body>
+
+    <h1>Find the buried treasure!</h1>
+    <p id="game-rules">Some text explaining the game rules will go here....</p>
+    <img id="background" src="https://images.photowall.com/products/67045/pirate-island-1.jpg?h=699&q=85" alt="island">
+    <div class="game-container">
+        <img src="treasure-map1.png" id="map">
+        <div class="response-info">
+            <p id="progress"> Your progress: </p>
+            <p id="distance"> Click on the map to find the treasure!</p>
+            <button onclick="pageReload()">Start new game</button> 
+        </div>
+       
+    </div>
+<script src="map1_script.js" type="text/javascript"></script>
+</body>
+</html>

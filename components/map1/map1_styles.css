@@ -1,0 +1,86 @@
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+        
+}
+
+#background {
+    opacity: 0.5;
+    position: absolute;
+    top:0;
+    left:0;
+    margin:0px;
+    z-index: -1;
+    width: 100vw;
+}
+
+.game-container {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    opacity: 1;
+    
+}
+
+.response-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 3px solid hsla(51, 80%, 90%, 1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    min-height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: hsla(51, 80%, 90%, 0.4);
+    
+}
+
+h1 {
+    color: rgb(26, 98, 134);
+    margin: 0px;
+    padding-top: 50px;
+    text-transform: uppercase;
+    opacity: 1;
+    
+}
+
+#map {
+    width: 700px;
+    height: auto;
+}
+
+#distance, #game-rules {
+    font-size: 20px ;
+    color: rgb(26, 98, 134)
+    
+}
+
+#progress{
+    font-size: 30px ;
+    color: rgb(26, 98, 134);
+
+}
+
+
+button {
+    
+    border-radius: 7px;
+    border-color: hsla(51, 80%, 90%, 1);
+    color: rgb(26, 98, 134);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: hsla(52, 64%, 83%, 0.6);
+    height: 50px;
+    width: 150px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
