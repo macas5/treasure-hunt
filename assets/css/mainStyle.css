@@ -1,0 +1,69 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-bg{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+}
+.main-title{
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    'map1 map2' 
+    'map3 map4';
+}
+
+#map-1{
+    grid-area: map1;
+    border: 1px solid black;
+}
+#map-2{
+    grid-area: map2;
+}
+#map-3{
+    grid-area: map3;
+}
+#map-4{
+    grid-area: map4;
+}
+.filters{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filter-btn{
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+.btn{
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 20px 50px;
+}
+.rnd-btn{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
