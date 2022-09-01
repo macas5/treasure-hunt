@@ -20,12 +20,28 @@ body {
 
 .game-container {
     display: flex;
-    width: 70%;
+    width: 90%;
     align-items: center;
+    justify-content: space-between;
     opacity: 1;
+  
     
 }
 
+.levels-container {
+    padding-right:20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.levels-container>button{
+    margin: 20px 0;
+    min-height: 60px;
+    min-width: 200px;
+    font-size: 20px;
+
+}
 .response-info {
     display: flex;
     flex-direction: column;
@@ -33,7 +49,7 @@ body {
     border: 3px solid hsla(51, 80%, 90%, 1);
     border-radius: 10px;
     padding: 20px;
-    width: 200px;
+    min-width: 300px;
     min-height: 250px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     background-color: hsla(51, 80%, 90%, 0.4);
@@ -74,10 +90,11 @@ button {
     color: rgb(26, 98, 134);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: hsla(52, 64%, 83%, 0.6);
-    height: 50px;
+    height: 60px;
     width: 150px;
     text-transform: uppercase;
     position: relative;
+    font-weight: bold;
 }
 
 button:hover {
