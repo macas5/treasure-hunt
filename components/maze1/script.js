@@ -1,21 +1,41 @@
-const mazeImg = document.querySelector("#maze-img");
+const maze = document.querySelector("#maze-img");
+const pirate = document.querySelector('#pirate-img');
 const activeKeys = [];
+let isRunning = true;
 
-const keyPress = (e) => {
-    const index = activeKeys.indexOf(e.code);
-    if (index == -1) {
-        activeKeys.push(e.code);
+const move = (key) => {
+    const top = pirate.offsetTop - 8;
+    const left = pirate.offsetLeft - 8;
+    switch (key) {
+        case 'ArrowRight':
+            pirate.style.left = (left + 5) + 'px';
+            console.log('move right');
+            break;
+
+        case 'ArrowLeft':
+            pirate.style.left = (left - 5) + 'px';
+            console.log('move left');
+            break;
+
+        case 'ArrowUp':
+            pirate.style.top = (top - 5) + 'px';
+            console.log('move up');
+            break;
+
+        case 'ArrowDown':
+            pirate.style.top = (top + 5) + 'px';
+            console.log('move down');
+            break;  
+   
+        default:
+            console.log('invalid move');
+            
+            break;
     }
-    console.log(`activeKeys ${activeKeys}`);
 }
 
-const keyRelease = (e) => {
-    const index = activeKeys.indexOf(e.code);
-    if (index !== -1){
-        activeKeys.splice(index, 1);
-    }
-    console.log(`activeKeys ${activeKeys}`);
+const keyPress = (e) => {
+    move(e.code);
 }
 
 document.addEventListener('keydown', (key) => keyPress(key));
-document.addEventListener('keyup', (key) => keyRelease(key));

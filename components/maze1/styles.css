@@ -1,12 +1,13 @@
+
 #maze-img {
-    max-width: 800px;
+    max-width: 600px;
     z-index: -1;
     position: absolute;
 }
 
 #pirate-img {
-    max-width: 60px;
-    position: absolute;
-    top: 20%;
-    left: 10%;
+    max-width: 45px;
+    position: relative;
+    top: 140px;
+    left: 140px;
 }
