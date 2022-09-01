@@ -18,21 +18,39 @@ body * {
    padding-top: 20px;
    padding-bottom: 20px;
 }
+.main-content{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 
+.filter-btn {
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
 .grid-container{
     display: grid;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    grid-template-columns: auto auto;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     'map1 map2' 
     'map3 map4';
 }
-
-#map-1{
-    grid-area: map1;
+.map {
     border: 1px solid black;
+}
+#map-1{
+    grid-area: map1; 
 }
 #map-2{
     grid-area: map2;
@@ -43,17 +61,8 @@ body * {
 #map-4{
     grid-area: map4;
 }
-.filters{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-.filter-btn{
-    border: 1px solid black;
-    border-radius: 50px;
-    padding: 10px 20px;
+.map img{
+    width: 80%
 }
 .btn{
     border: 1px solid black;
