@@ -28,7 +28,6 @@ const move = (key) => {
     switch (key) {
         case 'ArrowUp':
             if (eligibleMove().includes('up')) pirate.style.top = (top - 28) + 'px';
-            else pirate.style.top = top +'px';
             break;
 
         case 'ArrowRight':
