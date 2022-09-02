@@ -9,5 +9,5 @@ import { btnElement } from "./btn.js";
 headerElement();
 gridContainer();
 mapPictures(maps);
-btnElement();
+btnElement(maps);
 

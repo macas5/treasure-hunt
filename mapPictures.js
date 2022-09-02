@@ -8,30 +8,22 @@ export const mapPictures = (maps) => {
         imgElement.setAttribute('height', `300`);
         imgElement.setAttribute('data-index', i);
         imgElement.src = maps[i].pic;
-   
+
         document.querySelector('.grid-container').appendChild(imgElement);
         //Movements
         imgElement.addEventListener("mouseover", mouseOver);
         function mouseOver() {
-            let tl = gsap.timeline({ repeat: 0, repeatDelay: 0, yoyo: true })
-            tl.to(`#map${i}`, { rotation: 360 });
+            let picMove = gsap.timeline({ repeat: 0, repeatDelay: 0})
+            picMove.to(`#map${i}`, { rotation: 360 });
         }
 
         //Click game
         imgElement.addEventListener('click', playGame);
         function playGame(e) {
             const targetIndex = parseInt(e.target.dataset.index);
-            //const link = maps[targetIndex].link; 
-            const { link } = maps[targetIndex]; 
-            location.href =  link 
+            const { link } = maps[targetIndex];
+            location.href = link
         }
-
-       
-
     }
-
-
-
-
 }
 

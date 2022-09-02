@@ -19,13 +19,16 @@ export const btnElement = (maps) => {
     }
 
     // Play random game
-    btnElement.addEventListener('click', playRandom);
-    function playRandom() {
-        let randomNumber = Math.trunc(Math.random()*4)
-        console.log(randomNumber);
-        console.log(maps.length);
-        //location.href = 'index.html'
-        // parent.open = 'maps[0]'
+    btnElement.addEventListener('click', playGame);
+
+    function playGame(e) {
+        console.log(e.target);
+        const rand = Math.trunc(Math.random() * maps.length)
+        const link = maps[rand].link
+        location.href = link
     }
 
 }
+
+
+
