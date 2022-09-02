@@ -31,8 +31,8 @@ const eligibleMove = (character, walls) => {
 const move = (key, character, walls) => {
     const characterEl = character.element;
 
-    const top = characterEl.offsetTop - 8;
-    const left = characterEl.offsetLeft - 8;
+    const top = characterEl.offsetTop;
+    const left = characterEl.offsetLeft;
     switch (key) {
         case 'ArrowUp':
             if (eligibleMove(character, walls).includes('up')){
@@ -73,8 +73,10 @@ const keyPress = (e) => {
     const charRow = "row" + pirate.posY;
     const charCol = "col" + pirate.posX;
     if (mazeWalls[charRow][charCol].treasure == true) {
-        console.log('Victory!');
+        alert('Victory!');
     }
 }
+
+console.log(maze);
 
 document.addEventListener('keydown', (key) => keyPress(key));
