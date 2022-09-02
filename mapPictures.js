@@ -8,13 +8,20 @@ export const mapPictures = (maps) => {
         imgElement.setAttribute('height', `300`);
         imgElement.setAttribute('data-index', i);
         imgElement.src = maps[i].pic;
-
         document.querySelector('.grid-container').appendChild(imgElement);
+
         //Movements
-        imgElement.addEventListener("mouseover", mouseOver);
+        imgElement.addEventListener('mouseover', mouseOver);
+        imgElement.addEventListener('mouseout', mouseOut);
+    
         function mouseOver() {
             let picMove = gsap.timeline({ repeat: 0, repeatDelay: 0})
-            picMove.to(`#map${i}`, { rotation: 360 });
+            picMove.to(`#map${i}`, { rotation: 360 });           
+        }
+
+        function mouseOut() {
+            let picMove = gsap.timeline({ repeat: 0, repeatDelay: 0})
+            picMove.to(`#map${i}`, { rotation: 0, scale: 1});
         }
 
         //Click game
