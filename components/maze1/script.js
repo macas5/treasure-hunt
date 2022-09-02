@@ -1,6 +1,9 @@
 import { mazeWalls } from "./assets/data.js";
 
 const maze = document.querySelector("#maze-img");
+const victoryScreen = document.querySelector("#victoryScreen");
+const reloadButton = document.querySelector("#reload");
+const mainPageButton = document.querySelector("#mainPage");
 const pirate = {
     posX : 1,
     posY : 3,
@@ -73,11 +76,9 @@ const keyPress = (e) => {
     const charRow = "row" + pirate.posY;
     const charCol = "col" + pirate.posX;
     if (mazeWalls[charRow][charCol].treasure == true) {
-        alert('Victory!');
+        victoryScreen.style.display = 'block';
     }
 }
-
-console.log(maze);
 
 window.onload = () => {
     const mazeCoords = maze.getBoundingClientRect();
@@ -90,4 +91,16 @@ window.onload = () => {
     pirateEl.style.top = pirateStartingY + 'px';
 }
 
+const reloadPage = () => {
+    location.reload();
+}
+
+const mainPage = () => {
+    window.open('../../index.html', '_self');
+}
+
+
+
 document.addEventListener('keydown', (key) => keyPress(key));
+reloadButton.addEventListener('click', reloadPage);
+mainPageButton.addEventListener('click', mainPage);
