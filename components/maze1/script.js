@@ -25,7 +25,6 @@ const eligibleMove = (character, walls) => {
     const indexLeft = eligibleMoves.indexOf('left')
     if (!walls[charRow][charCol].moveableLeft) eligibleMoves.splice(indexLeft, 1);
 
-    console.log(eligibleMoves);
     return eligibleMoves;
 };
 
@@ -38,7 +37,7 @@ const move = (key, character, walls) => {
         case 'ArrowUp':
             if (eligibleMove(character, walls).includes('up')){
                 character.posY -= 1;
-                characterEl.style.top = (top - 28) + 'px';  
+                characterEl.style.top = (top - 28) + 'px';
             } 
             break;
             
@@ -70,6 +69,12 @@ const move = (key, character, walls) => {
 
 const keyPress = (e) => {
     move(e.code, pirate, mazeWalls);
+
+    const charRow = "row" + pirate.posY;
+    const charCol = "col" + pirate.posX;
+    if (mazeWalls[charRow][charCol].treasure == true) {
+        console.log('Victory!');
+    }
 }
 
 document.addEventListener('keydown', (key) => keyPress(key));

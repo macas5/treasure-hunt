@@ -724,19 +724,22 @@ export const mazeWalls = {
             "moveableUp" : true,
             "moveableRight" : true,
             "moveableDown" : true,
-            "moveableLeft" : false
+            "moveableLeft" : false,
+            "treasure": true
         },
         "col11" : {
             "moveableUp" : false,
             "moveableRight" : true,
             "moveableDown" : true,
-            "moveableLeft" : true
+            "moveableLeft" : true,
+            "treasure": true
         },
         "col12" : {
             "moveableUp" : false,
             "moveableRight" : false,
             "moveableDown" : true,
-            "moveableLeft" : true
+            "moveableLeft" : true,
+            "treasure": true
         }
     },
     "row11": {
@@ -798,19 +801,22 @@ export const mazeWalls = {
             "moveableUp" : true,
             "moveableRight" : true,
             "moveableDown" : true,
-            "moveableLeft" : false
+            "moveableLeft" : false,
+            "treasure": true
         },
         "col11" : {
             "moveableUp" : true,
             "moveableRight" : true,
             "moveableDown" : true,
-            "moveableLeft" : true
+            "moveableLeft" : true,
+            "treasure": true
         },
         "col12" : {
             "moveableUp" : true,
             "moveableRight" : false,
             "moveableDown" : true,
-            "moveableLeft" : true
+            "moveableLeft" : true,
+            "treasure": true
         }
     },
     "row12": {
@@ -872,19 +878,22 @@ export const mazeWalls = {
             "moveableUp" : true,
             "moveableRight" : true,
             "moveableDown" : false,
-            "moveableLeft" : false
+            "moveableLeft" : false,
+            "treasure": true
         },
         "col11" : {
             "moveableUp" : true,
             "moveableRight" : true,
             "moveableDown" : false,
-            "moveableLeft" : true
+            "moveableLeft" : true,
+            "treasure": true
         },
         "col12" : {
             "moveableUp" : true,
             "moveableRight" : false,
             "moveableDown" : false,
-            "moveableLeft" : true
+            "moveableLeft" : true,
+            "treasure": true
         }
     },
 }
