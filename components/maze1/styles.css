@@ -10,10 +10,6 @@ h1 {
     text-align: center;
 }
 
-/* #game {
-
-} */
-
 #bg-img {
     z-index: -99;
     width: 100%;
@@ -32,8 +28,10 @@ h1 {
 #pirate-img {
     max-width: 45px;
     position: absolute;
-    top: 25%;
-    left: calc(40% + 8px);
+    /* top: 25%;
+    left: calc(40% + 8px); */
+    top: 0;
+    left: 0;
 }
 
 #explanation {

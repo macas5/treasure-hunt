@@ -79,4 +79,15 @@ const keyPress = (e) => {
 
 console.log(maze);
 
+window.onload = () => {
+    const mazeCoords = maze.getBoundingClientRect();
+    const pirateEl = pirate.element;
+
+    const pirateStartingX = mazeCoords.left + 117;
+    const pirateStartingY = mazeCoords.top + 168;
+
+    pirateEl.style.left = pirateStartingX + 'px';
+    pirateEl.style.top = pirateStartingY + 'px';
+}
+
 document.addEventListener('keydown', (key) => keyPress(key));
