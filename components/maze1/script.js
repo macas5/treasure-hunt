@@ -1,54 +1,75 @@
-const maze = document.querySelector("#maze-img");
-const pirate = document.querySelector('#pirate-img');
+import { mazeWalls } from "./assets/data.js";
 
-const eligibleMove = () => {
-    const position = [pirate.offsetLeft, pirate.offsetTop]
+const maze = document.querySelector("#maze-img");
+const pirate = {
+    posX : 1,
+    posY : 3,
+    element : document.querySelector('#pirate-img')
+}
+
+const eligibleMove = (character, walls) => {
+    const charRow = "row" + character.posY;
+    const charCol = "col" + character.posX;
+
     const eligibleMoves = ['up', 'right', 'down', 'left'];
 
     const indexUp = eligibleMoves.indexOf('up')
-    if (position[1] <= 125) eligibleMoves.splice(indexUp, 1);
+    if (!walls[charRow][charCol].moveableUp) eligibleMoves.splice(indexUp, 1);
 
     const indexRight = eligibleMoves.indexOf('right')
-    if (position[0] >= 425) eligibleMoves.splice(indexRight, 1);
+    if (!walls[charRow][charCol].moveableRight) eligibleMoves.splice(indexRight, 1);
 
     const indexDown = eligibleMoves.indexOf('down')
-    if (position[1] >= 425) eligibleMoves.splice(indexDown, 1);
+    if (!walls[charRow][charCol].moveableDown) eligibleMoves.splice(indexDown, 1);
 
     const indexLeft = eligibleMoves.indexOf('left')
-    if (position[0] <= 125) eligibleMoves.splice(indexLeft, 1);
+    if (!walls[charRow][charCol].moveableLeft) eligibleMoves.splice(indexLeft, 1);
 
+    console.log(eligibleMoves);
     return eligibleMoves;
 };
 
+const move = (key, character, walls) => {
+    const characterEl = character.element;
 
-const move = (key) => {
-    const top = pirate.offsetTop - 8;
-    const left = pirate.offsetLeft - 8;
-    console.log(eligibleMove());
+    const top = characterEl.offsetTop - 8;
+    const left = characterEl.offsetLeft - 8;
     switch (key) {
         case 'ArrowUp':
-            if (eligibleMove().includes('up')) pirate.style.top = (top - 28) + 'px';
+            if (eligibleMove(character, walls).includes('up')){
+                character.posY -= 1;
+                characterEl.style.top = (top - 28) + 'px';  
+            } 
             break;
-
+            
         case 'ArrowRight':
-            if (eligibleMove().includes('right')) pirate.style.left = (left + 28) + 'px';
+            if (eligibleMove(character, walls).includes('right')){
+                character.posX += 1;
+                characterEl.style.left = (left + 28) + 'px';
+            }
             break;
-
+                
         case 'ArrowDown':
-            if (eligibleMove().includes('down')) pirate.style.top = (top + 28) + 'px';
+            if (eligibleMove(character, walls).includes('down')) {
+                character.posY += 1;
+                characterEl.style.top = (top + 28) + 'px';
+            }
             break;  
-
+                    
         case 'ArrowLeft':
-            if (eligibleMove().includes('left')) pirate.style.left = (left - 28) + 'px';
+            if (eligibleMove(character, walls).includes('left')){
+                character.posX -= 1;
+                characterEl.style.left = (left - 28) + 'px';
+            }
             break;
-   
+                        
         default:
             break;
-    }
+        }
 }
 
 const keyPress = (e) => {
-    move(e.code);
+    move(e.code, pirate, mazeWalls);
 }
 
 document.addEventListener('keydown', (key) => keyPress(key));
