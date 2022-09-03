@@ -20,6 +20,12 @@ document.getElementById("easy").addEventListener("click", pageReload)
 document.getElementById("start-game").addEventListener("click", pageReload)
 
 
+const message = document.getElementById("congrats");
+const closingIcon = document.getElementById("close-icon")
+const darkmode = document.getElementsByClassName("darkmode")
+
+closingIcon.addEventListener("click", pageReload)
+
 
 function pickRandomCoordinates(arr) {
     return  arr[Math.floor(Math.random() * arr.length)];
@@ -49,17 +55,17 @@ $("#map").click(function(event){clicksCounter++;
         const distance=calcDistance(event, target);
         const progress=getProgressFeedback(distance);
         $("#result").text(progress);
-        if (distance<10) {$("#result").text("Congratulations, you found the treasure! Your result is " + clicksCounter + " clicks!")}
+        if (distance<10) {
+			$("#congrat-msg").text("Congratulations, you found the treasure! Your result is " + clicksCounter + " clicks!");
+			message.style.zIndex="2"
+		}
      });
 
 $("#hard").click(function(){
-        console.log("Hello, it will be hard!")
         document.getElementById("audio").play();
         const darkBGr = document.getElementById("background")
         darkBGr.setAttribute("src", "https://wallpaperaccess.com/full/3591276.jpg")
         darkBGr.style.opacity = "0.9";
-        
-        const darkmode = document.getElementsByClassName("darkmode")
         for (let i=0; i<darkmode.length; i++){
             darkmode[i].style.color = "black";}
         function pickRandomCoordinates(arr) {
@@ -93,9 +99,13 @@ $("#hard").click(function(){
             const distance=calcDistance(event, target);
             const progress=getProgressFeedback(distance);
             $("#result").text(progress);
-            if (distance<5) {$("#result").text("Congratulations, you found the treasure! Your result is " + clicksCounter + " clicks!");
-                
+            if (distance<5) {
+				$("#congrat-msg").text("Congratulations, you found the treasure! Your result is " + clicksCounter + " clicks!");
+				message.style.zIndex="2";
+				
             }
-          });
-        }
+            
+         });
+        
+    }
 ) 
