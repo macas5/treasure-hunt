@@ -178,7 +178,7 @@ margin: 0 auto;
  @media (max-width: 740px) {
     #title {
          margin-top: 40px;
-         font-size: 20px;
+         font-size: 15px;
          
      }
      #result {
@@ -194,4 +194,8 @@ margin: 0 auto;
      #map {
          width: 130%;
      }
+
+    #congrat-msg {
+        font-size: 25px;
+    }
   }
