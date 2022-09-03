@@ -42,7 +42,7 @@ button:hover {
 }
 
 
-h1 {
+#title {
     color: rgb(26, 98, 134);
     margin: 0px;
     text-transform: uppercase;
@@ -130,6 +130,68 @@ margin: 0 auto;
       height: 100vh;
     }
     #map {
-        width: 75%;
+        width: 80%;
     }
  }
+
+ @media (max-width: 1000px) {
+    .game-info-block {
+        flex-direction: column;
+    
+    }
+    button {
+        height: 50px;
+    }
+    #result {
+        font-size: 25px;
+        height: 40px;
+        padding-top: 10px;
+        margin: 5px;
+        width: 400px;
+    }
+    #map {
+        width: 90%;
+    }
+ }
+
+ @media (max-width: 870px) {
+   #title {
+        margin-top: 40px;
+        font-size: 25px;
+        
+    }
+    #result {
+        font-size: 20px;
+        height: 30px;
+        padding-top: 10px;
+        margin: 5px;
+        width: 400px;
+    }
+    button {
+        height: 40px;
+    }
+    #map {
+        width: 100%;
+    }
+ }
+
+ @media (max-width: 740px) {
+    #title {
+         margin-top: 40px;
+         font-size: 20px;
+         
+     }
+     #result {
+         font-size: 20px;
+         height: 30px;
+         padding-top: 10px;
+         margin: 5px;
+         width: 90%;
+     }
+     button {
+         height: 40px;
+     }
+     #map {
+         width: 130%;
+     }
+  }
