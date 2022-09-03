@@ -9,28 +9,29 @@
     <link rel="stylesheet" href="map1_styles.css">
 </head>
 <body>
+    <div class="main darkmode">
+        <button id="index-page" class="darkmode">Back to main</button>
+        <h1 class="darkmode">Find the buried treasure!</h1>                     
+        <div class="game-container">
+            <div class="levels-container">
+                <button id="easy" class="diff-level darkmode">easy</button>
+                <button id="hard" class="diff-level darkmode">hard</button>
+            </div>
+            <img src="treasure-map1.png" id="map">
+            <div class="response-info">
+                <p id="progress" class="darkmode"> Your progress: </p>
+                <p id="result"> Click on the map to find the treasure!</p>
+                <button id="start-game" class="darkmode">Start new game</button> 
+            </div>
+        </div>    
+    </div>
+    
+    <audio id = "audio" loop>
+        <source src="music.mp3" type="audio/mp3" id = "audio">
+      Your browser does not support the audio element.
+      </audio>
     <img id="background" src="https://images.photowall.com/products/67045/pirate-island-1.jpg?h=699&q=85" alt="island">
-    
-    <div>
-        <h1 class="darkmode">Find the buried treasure!</h1>
-        <p id="game-rules" class="darkmode">Some text explaining the game rules will go here....</p>
-    </div>
-    
-    
-    <div class="game-container darkmode">
-        <div class="levels-container">
-            <button id="easy" class="diff-level darkmode">easy</button>
-            <button id="intermediate" class="diff-level darkmode">intermediate</button>
-            <button id="hard" class="diff-level darkmode">hard</button>
-        </div>
-        <img src="treasure-map1.png" id="map">
-        <div class="response-info">
-            <p id="progress" class="darkmode"> Your progress: </p>
-            <p id="distance" class="darkmode"> Click on the map to find the treasure!</p>
-            <button onclick="pageReload()" class="darkmode">Start new game</button> 
-        </div>
-       
-    </div>
+    <script src="script.js" type="text/javascript"></script>
 <script src="map1_script.js" type="text/javascript"></script>
 </body>
 </html>
