@@ -58,7 +58,7 @@ $("#map").click(function(event){clicksCounter++;
         if (distance<10) {
 			startConfetti();
 			$("#congrat-msg").text("Congratulations, you found the treasure! Your result is " + clicksCounter + " clicks!");
-			message.style.zIndex="2"
+			message.style.visibility="visible";
 		}
      });
 
@@ -103,7 +103,7 @@ $("#hard").click(function(){
             if (distance<5) {
 				startConfetti();
 				$("#congrat-msg").text("Congratulations, you found the treasure! Your result is " + clicksCounter + " clicks!");
-				message.style.zIndex="2";
+				message.style.visibility="visible";
 				
             }
             
