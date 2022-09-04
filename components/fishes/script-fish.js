@@ -28,7 +28,7 @@ function getProgressFeedback(distance){
     else if(distance < 25) {return "You are so, so close!"}
     else if(distance < 40) {return "You are getting warmer!"}
     else if(distance < 80) {return "Warm"}
-    else if(distance < 200) {return "Ooops, the fish have swimmed away!"}
+    else if(distance < 200) {return "Ooops, the fish have swum away!"}
     else {return "There are no fishes near you!"}
 }
 
@@ -39,7 +39,10 @@ $("#lake").click(function(event){clicksCounter++;
     if (distance<10) { 
         const message =document.getElementById("congrat-msg");
         message.style.visibility="visible";
-        $("#message").text("Congratulations! You caught the fish in " + clicksCounter + " catches!")}
+        $("#message").text("Congratulations! You caught the fish in " + clicksCounter + " catches!");
+        clicksCounter=0;
+           
+    }
  });
 
  const pageReload = () => window.location.reload()
