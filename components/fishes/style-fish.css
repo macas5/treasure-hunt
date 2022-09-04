@@ -26,20 +26,43 @@ body {
 }
 
 #index-page {
+    margin: 15px;
+    display: inline-block;
     position: relative;
-    top: 20px;
-    left: 1%;
-    background-color: var(--sunset1);
+    background-color: var(--viol);
     border:none;
-    box-shadow: 3px 3px 5px var(--sunset2);
     border-radius: 10px;
+    color: var(--navy);
+    box-shadow: 3px 3px 5px var(--purple);
     height: 3rem;
+    width: 10rem;
     font-size: 1rem;
     text-transform: uppercase;
-    font-weight: bold;
-    color: var(--navy);
+    font-weight: 600;
+    text-align: center;
     cursor: pointer;
+    transition: all 0.7s;
 }
+
+#index-page:after {
+    content: "«";
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    left: -25px;
+    transition: 0.7s;
+  }
+  
+#index-page:hover {
+    padding-left: 20px;
+    padding-right:5px;
+}
+
+#index-page:hover:after {
+    opacity: 1;
+    left: 17px;
+  }
+
 
 #game-title {
     position: absolute;
