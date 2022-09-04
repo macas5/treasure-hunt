@@ -4,9 +4,11 @@ $("#lake").ripples({
     interactive: true,
     perturbance: 0.02,
 });
+let screenWidth = $(window).width()
+// console.log(screenWidth)
 
 function createRandomCoordinates(size) {return Math.floor(Math.random()*size)}; 
-const lakeWidth = 850;
+const lakeWidth = screenWidth - 200;
 const lakeHeight = 340;
 const hiddenSpot = {
     x: createRandomCoordinates(lakeWidth),

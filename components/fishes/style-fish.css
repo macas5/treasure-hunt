@@ -66,9 +66,8 @@ body {
 
 #game-title {
     position: absolute;
-    /* width: 100%; */
     left:32%;
-    top:5%;
+    top:3%;
     color:var(--navy);
     font-size: 2rem;
     text-transform: uppercase;
@@ -225,7 +224,7 @@ body {
     position:absolute;
     width: 180px;
     height: 180px;
-    right: 498px;
+    right: 348px;
     top: 80px;
     background: radial-gradient(rgb(248, 248, 7), rgb(243, 243, 48), hsla(61, 88%, 63%, 0.925),hsla(60, 100%, 75%, 0.5));
     border-radius: 50%;
@@ -248,7 +247,7 @@ body {
 #sun-shadow1 {
     position: absolute;
     top:5px;
-    right: 495px;
+    right: 345px;
     width: 170px;
     height: 5px;
     background: radial-gradient(var(--cloud), var(--shadows));
@@ -260,7 +259,7 @@ body {
 #sun-shadow2 {
     position: absolute;
     top:15px;
-    right: 480px;
+    right: 330px;
     width: 200px;
     height: 5px;
     background: radial-gradient(var(--cloud), var(--shadows));
@@ -271,7 +270,7 @@ body {
 #sun-shadow3 {
     position: absolute;
     top: 25px;
-    right: 470px;
+    right: 320px;
     width: 220px;
     height: 5px;
     background: radial-gradient(var(--cloud), var(--shadows));
@@ -283,7 +282,7 @@ body {
 #sun-shadow4 {
     position: absolute;
     top: 35px;
-    right: 480px;
+    right: 330px;
     width: 200px;
     height: 5px;
     background: radial-gradient(var(--cloud), var(--shadows));
@@ -294,7 +293,7 @@ body {
 #sun-shadow5 {
     position: absolute;
     top: 45px;
-    right: 495px;
+    right: 345px;
     width: 170px;
     height: 5px;
     background: radial-gradient(var(--cloud), var(--shadows));
@@ -306,7 +305,7 @@ body {
 #sun-shadow6 {
     position: absolute;
     top: 55px;
-    right: 515px;
+    right: 365px;
     width: 120px;
     height: 5px;
     background: radial-gradient(var(--cloud), var(--shadows));
