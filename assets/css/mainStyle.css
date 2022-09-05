@@ -13,7 +13,7 @@ body * {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-image: url('/components/main-img/bg-cloud.webp');
+    background-image: url('/components/main-page/main-img/bg-cloud.webp');
 }
 .main-title{
    text-transform: capitalize;
@@ -24,19 +24,7 @@ body * {
     padding-left: 20px;
     padding-right: 20px;
 }
-.filters {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
-.filter-btn {
-    border: 1px solid black;
-    border-radius: 50px;
-    padding: 10px 20px;
-}
 .grid-container{
     display: grid;
     justify-items: center;
@@ -55,10 +43,10 @@ img{
         justify-content: center;
 }
 .map{
-    border: 2px solid black;
+    border: 1px solid rgba(97, 94, 129, 0.406);
     display: flex;
-        align-items: center;
-        justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .map0{
