@@ -79,11 +79,10 @@ function targetFoundPopUp() {
   document.getElementById("popUpImg").src = elem.url;
  }
 
-  const clueBtns = document.getElementById("clueButtons");
   const btnReturn = document.createElement("button");
   btnReturn.setAttribute("id", "btnReturn");
   btnReturn.innerHTML = "Main page!";
-  clueBtns.appendChild(btnReturn);
+  document.body.appendChild(btnReturn);
   btnReturn.addEventListener("click", () => (window.location = "/"));
 
 function createAgainButton() {

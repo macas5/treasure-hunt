@@ -120,6 +120,13 @@ button:disabled {
     margin-top: 20px;
 }
 
+#btnReturn{
+    min-width: 10%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
 @media screen and (max-width: 567px) {
     #clueContainer {
         padding-top: 0;
@@ -142,7 +149,7 @@ button:disabled {
 @media screen and (max-width: 992px) {
     .gridContainer {
         display: block;
-        padding: 0;
+        padding: 10%;
     }
 
     #gameContainer {
