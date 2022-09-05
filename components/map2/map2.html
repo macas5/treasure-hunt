@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="map2styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Qwitcher+Grypen:wght@700&family=Roboto+Slab&display=swap">
+  <script src="map2script.js" defer></script>
+  <title>Hunters</title>
+</head>
+
+<body>
+  <div id="main">
+    <div class="gridContainer">
+      <div id="difficultyLevels" class="gridItem">
+        <h1>Select Difficulty</h1>
+        <button id="easy">Easy</button>
+        <button id="medium">Medium</button>
+        <button id="hard">Hard</button>
+      </div>
+      <div id="gameContainer" class="gridItem">
+        <h1 id="instruction"></h1>
+        <div id="imgWrapper">
+          <img id="treasureMap" src="https://images5.alphacoders.com/842/842738.png">
+        </div>
+        <div id="foundTarget">
+          <h1 id="foundTargetText"></h1>
+            <img id="popUpImg" src="" alt="Random image">
+        </div>
+      </div>
+      <div id="clueContainer" class="gridItem">
+        <div>
+          <h1 id="clickScore"></h1>
+        </div>
+        <div>
+          <h1 id="hintWindow"></h1>
+        </div>
+        <div id="clueButtons">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

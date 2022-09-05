@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style-fish.css">
+    <title>Fishing tournament</title>
+</head>
+<body>
+    <div id="game-title">Catch the fish in the lake</div>
+    <div class="sky">
+        <button id="index-page">Back to main</button>
+        <div id="feedback">Click in the water to find the fish!</div>
+        <div class="clouds"></div>
+        <div class="clouds"></div>
+        <div class="mountains" id="mount-1"></div>
+        <div class="mountains" id="mount-2"></div>
+        <div class="trees">
+            <div id="tree1"></div>
+            <div id="tree2"></div>
+            <div id="tree3"></div>
+            <div id="tree4"></div>
+            <div id="tree5"></div>
+            <div id="tree6"></div>
+            <div id="tree7"></div>
+            <div id="tree8"></div>
+        </div>
+        <div id="sun"></div>
+    </div>
+    <div class="water">
+        <i class="fa-solid fa-fish-fins swim" id="fish1"></i>
+        <i class="fa-solid fa-fish-fins swim" id="fish2"></i>
+        <i class="fa-solid fa-fish-fins swim" id="fish3"></i>
+        <i class="fa-solid fa-fish-fins swim" id="fish4"></i>
+        <div class="grass"></div>
+        <div class="grass"></div>
+        <div class="grass"></div>
+        <div class="grass"></div>
+        <div class="grass2"></div>
+        <div class="grass2"></div>
+        <div class="grass2"></div>
+        <div class="grass2"></div>
+        <div class="grass3"></div>
+        <div class="grass3"></div>
+        <div class="grass3"></div>
+        <div class="grass3"></div>
+
+        <div id="sun-shadow1"></div>
+        <div id="sun-shadow2"></div>
+        <div id="sun-shadow3"></div>
+        <div id="sun-shadow4"></div>
+        <div id="sun-shadow5"></div>
+        <div id="sun-shadow6"></div>
+                          
+        <div id="rock1"></div>
+        <div id="rock2"></div>
+        <img src="media/fisherman.png" alt="fisherman" id="fisherman" class="hidden">
+
+        <div id="lake"></div>
+        <div id="congrat-msg">
+            <i class="fa-solid fa-circle-xmark" id="close"></i>
+            <p id="message"></p>
+            <button id="new-game">Start new game</button>
+            <img id="victory-img" src="media/victory-fish-removebg-1.png" alt="caught fish">
+        </div>
+    </div>
+    <script type="text/javascript" src="script-fish.js"></script>
+</body>
+</html>

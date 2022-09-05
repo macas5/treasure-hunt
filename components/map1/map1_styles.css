@@ -5,87 +5,21 @@ body {
     flex-direction:column;
     align-items: center;
     justify-content: center;
-    position: relative;
-        
+    position: relative;   
 }
+
 
 #background {
     opacity: 0.5;
-    position: absolute;
+    position: fixed;
     top:0;
     left:0;
     margin:0px;
     z-index: -1;
     width: 100%;
     height: auto;
-    
+    background-repeat: repeat;
 }
-
-.game-container {
-    display: flex;
-    width: 90%;
-    align-items: center;
-    justify-content: space-between;
-    opacity: 1;
-  
-    
-}
-
-.levels-container {
-    padding-right:20px;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.levels-container>button{
-    margin: 20px 0;
-    min-height: 60px;
-    min-width: 200px;
-    font-size: 20px;
-
-}
-.response-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border: 3px solid hsla(51, 80%, 90%, 1);
-    border-radius: 10px;
-    padding: 20px;
-    min-width: 300px;
-    min-height: 250px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    background-color: hsla(51, 80%, 90%, 0.4);
-    
-}
-
-h1 {
-    color: rgb(26, 98, 134);
-    margin: 0px;
-    padding-top: 50px;
-    text-transform: uppercase;
-    opacity: 1;
-   
-    
-}
-
-#map {
-    width: 700px;
-    height: auto;
-}
-
-#distance, #game-rules {
-    font-size: 20px ;
-    color: rgb(26, 98, 134)
-    
-}
-
-#progress{
-    font-size: 30px ;
-    color: rgb(26, 98, 134);
-
-}
-
 
 button {
     
@@ -104,5 +38,164 @@ button {
 button:hover {
     transform: scale(1.1);
     transition: 1s;
+    cursor: pointer;
 }
 
+
+#title {
+    color: rgb(26, 98, 134);
+    margin: 0px;
+    text-transform: uppercase;
+    opacity: 1;
+    padding-top: 30px
+}
+
+.main {
+width : 90vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+}
+
+#index-page {
+    position: absolute;
+    left: 10px;
+    top:10px;
+}
+
+.game-info-block {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+#result {
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 7px;
+    border-color: hsla(51, 80%, 90%, 1);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: hsla(52, 64%, 83%, 0.6);
+    padding-top: 20px;
+    height: 60px;
+    width: 500px;
+}
+
+#map {
+    width: 65%;
+    height: auto;
+}
+
+#congrats {
+    color: red;
+    font-size: 200%;
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid hsla(51, 80%, 90%, 1);
+    border-radius: 3%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: hsla(51, 80%, 90%, 0.8);
+    width: 30%;
+    height: 40%;
+    padding: 0 25px;
+    visibility: hidden;
+}
+
+#confetti-canvas {
+    position:fixed;
+    top:0;
+    z-index: 3
+  }
+
+#close-icon {
+    align-self: flex-end;
+    margin-top: 0;
+}
+#close-icon:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+@media (max-width:1210px){
+    #background {
+      height: 100vh;
+    }
+    #map {
+        width: 80%;
+    }
+ }
+
+ @media (max-width: 1000px) {
+    .game-info-block {
+        flex-direction: column;
+    
+    }
+    button {
+        height: 50px;
+    }
+    #result {
+        font-size: 25px;
+        height: 40px;
+        padding-top: 10px;
+        margin: 5px;
+        width: 400px;
+    }
+    #map {
+        width: 90%;
+    }
+ }
+
+ @media (max-width: 870px) {
+   #title {
+        margin-top: 40px;
+        font-size: 25px;
+        
+    }
+    #result {
+        font-size: 20px;
+        height: 30px;
+        padding-top: 10px;
+        margin: 5px;
+        width: 400px;
+    }
+    button {
+        height: 40px;
+    }
+    #map {
+        width: 100%;
+    }
+ }
+
+ @media (max-width: 740px) {
+    #title {
+         margin-top: 40px;
+         font-size: 15px;
+         
+     }
+     #result {
+         font-size: 20px;
+         height: 30px;
+         padding-top: 10px;
+         margin: 5px;
+         width: 90%;
+     }
+     button {
+         height: 40px;
+     }
+     #map {
+         width: 130%;
+     }
+
+    #congrat-msg {
+        font-size: 25px;
+    }
+  }
