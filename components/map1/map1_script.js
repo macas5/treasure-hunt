@@ -64,6 +64,7 @@ $("#map").click(function(event){clicksCounter++;
 
 $("#hard").click(function(){
         document.getElementById("audio").play();
+		document.getElementById("audio").volume = 0.3;
         const darkBGr = document.getElementById("background")
         darkBGr.setAttribute("src", "https://wallpaperaccess.com/full/3591276.jpg")
         darkBGr.style.opacity = "0.9";
