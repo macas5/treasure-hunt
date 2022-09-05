@@ -31,11 +31,6 @@ function getRandomTarget(arr) {
 
 const target = getRandomTarget(targets);
 
-function createButtons() {
-  createAgainButton();
-  createReturnButton();
-}
-
 let getDistance = function (event, target) {
   const diffX = event.offsetX - target.x;
   const diffY = event.offsetY - target.y;
@@ -71,7 +66,7 @@ function enableGame() {
     displaysClue(distance);
     if (distance < diffLevel) {
       targetFoundPopUp();
-      createButtons();
+      createAgainButton();
     }
   });
 }
@@ -84,14 +79,12 @@ function targetFoundPopUp() {
   document.getElementById("popUpImg").src = elem.url;
  }
 
-function createReturnButton() {
   const clueBtns = document.getElementById("clueButtons");
   const btnReturn = document.createElement("button");
   btnReturn.setAttribute("id", "btnReturn");
   btnReturn.innerHTML = "Main page!";
   clueBtns.appendChild(btnReturn);
   btnReturn.addEventListener("click", () => (window.location = "/"));
-}
 
 function createAgainButton() {
   const clueBtns = document.getElementById("clueButtons");
