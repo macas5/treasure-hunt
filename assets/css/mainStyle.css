@@ -43,10 +43,10 @@ img{
         justify-content: center;
 }
 .map{
-    border: 2px solid black;
+    border: 1px solid rgba(97, 94, 129, 0.406);
     display: flex;
-        align-items: center;
-        justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .map0{
