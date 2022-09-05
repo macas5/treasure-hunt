@@ -142,7 +142,7 @@ button:disabled {
 @media screen and (max-width: 992px) {
     .gridContainer {
         display: block;
-        padding: 0;
+        padding: 10%;
     }
 
     #gameContainer {
