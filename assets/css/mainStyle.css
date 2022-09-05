@@ -13,7 +13,7 @@ body * {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-image: url('/components/main-page/main-img/bg-cloud.webp');
+    background-image: url('http://st.houzz.com/simgs/d43188a401c4d8f1_4-5766/contemporary-kids-decor.jpg');
 }
 .main-title{
    text-transform: capitalize;
