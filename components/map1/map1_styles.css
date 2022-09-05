@@ -47,7 +47,7 @@ button:hover {
     margin: 0px;
     text-transform: uppercase;
     opacity: 1;
-    padding-top: 30px
+    padding-top: 10px
 }
 
 .main {
@@ -89,6 +89,8 @@ margin: 0 auto;
 #map {
     width: 65%;
     height: auto;
+    position: relative;
+    top:-30px
 }
 
 #congrats {
