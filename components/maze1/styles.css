@@ -11,6 +11,25 @@ h1 {
     text-align: center;
 }
 
+header button {
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 7px;
+    border-color: hsla(51, 80%, 90%, 1);
+    color: rgb(26, 98, 134);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: hsla(52, 64%, 83%, 0.6);
+    height: 60px;
+    width: 150px;
+    font-weight: bold;
+}
+
+header button:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+}
+
 #bg-img {
     z-index: -99;
     width: 100%;

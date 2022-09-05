@@ -3,7 +3,7 @@ import { mazeWalls } from "./assets/data.js";
 const maze = document.querySelector("#maze-img");
 const victoryScreen = document.querySelector("#victoryScreen");
 const reloadButton = document.querySelector("#reload");
-const mainPageButton = document.querySelector("#mainPage");
+const mainPageButtons = document.querySelectorAll(".mainPage");
 const pirate = {
     posX : 1,
     posY : 3,
@@ -103,4 +103,4 @@ const mainPage = () => {
 
 document.addEventListener('keydown', (key) => keyPress(key));
 reloadButton.addEventListener('click', reloadPage);
-mainPageButton.addEventListener('click', mainPage);
+mainPageButtons.forEach(button => button.addEventListener('click', mainPage));
