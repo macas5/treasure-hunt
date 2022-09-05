@@ -22,6 +22,7 @@ header button {
     height: 60px;
     width: 150px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 header button:hover {
@@ -74,6 +75,7 @@ header button:hover {
 	font-size:17px;
 	padding:16px 31px;
 	text-decoration:none;
+    text-transform: uppercase;
 	text-shadow:0px 1px 0px #2f6627;
 
     margin: 0 20px;
