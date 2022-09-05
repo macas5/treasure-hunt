@@ -14,19 +14,12 @@ const eligibleMove = (character, walls) => {
     const charRow = "row" + character.posY;
     const charCol = "col" + character.posX;
 
-    const eligibleMoves = ['up', 'right', 'down', 'left'];
+    const eligibleMoves = [];
 
-    const indexUp = eligibleMoves.indexOf('up')
-    if (!walls[charRow][charCol].moveableUp) eligibleMoves.splice(indexUp, 1);
-
-    const indexRight = eligibleMoves.indexOf('right')
-    if (!walls[charRow][charCol].moveableRight) eligibleMoves.splice(indexRight, 1);
-
-    const indexDown = eligibleMoves.indexOf('down')
-    if (!walls[charRow][charCol].moveableDown) eligibleMoves.splice(indexDown, 1);
-
-    const indexLeft = eligibleMoves.indexOf('left')
-    if (!walls[charRow][charCol].moveableLeft) eligibleMoves.splice(indexLeft, 1);
+    if (walls[charRow][charCol].moveableUp) eligibleMoves.push('up');
+    if (walls[charRow][charCol].moveableRight) eligibleMoves.push('right');
+    if (walls[charRow][charCol].moveableDown) eligibleMoves.push('down');
+    if (walls[charRow][charCol].moveableLeft) eligibleMoves.push('left');
 
     return eligibleMoves;
 };
