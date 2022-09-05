@@ -83,7 +83,7 @@ function targetFoundPopUp() {
   btnReturn.setAttribute("id", "btnReturn");
   btnReturn.innerHTML = "Main page!";
   document.body.appendChild(btnReturn);
-  btnReturn.addEventListener("click", () => (window.location = "/"));
+  btnReturn.addEventListener("click", () => (window.location = "../../index.html"));
 
 function createAgainButton() {
   const clueBtns = document.getElementById("clueButtons");
